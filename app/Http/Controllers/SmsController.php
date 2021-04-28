@@ -62,7 +62,7 @@ class SmsController extends Controller
          $smses->phone_no;
          $message=$smses->messages;
         $this->sendSMS($smses,$message);
-        return redirect('/sms/'.$sms->id);
+        return redirect('/sms/'.$smses->id);
     }
 
     /**
@@ -74,6 +74,7 @@ class SmsController extends Controller
     public function show(Sms $sms)
     {
         //
+        return view('sms.show');
     }
 
     /**
@@ -85,6 +86,7 @@ class SmsController extends Controller
     public function edit(Sms $sms)
     {
         //
+        return view('sms.edit');
     }
 
     /**
